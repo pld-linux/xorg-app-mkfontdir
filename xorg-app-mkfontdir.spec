@@ -10,15 +10,15 @@ Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/app/mkfontdir-%{version}.tar.bz
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	xorg-util-util-macros
 BuildRequires:	pkgconfig >= 0.19
+BuildRequires:	xorg-util-util-macros
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 mkfontdir application.
 
 %description -l pl
-Aplikacja mkfontdir
+Aplikacja mkfontdir.
 
 %prep
 %setup -q -n mkfontdir-%{version}
