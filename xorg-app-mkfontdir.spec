@@ -27,7 +27,6 @@ Aplikacja mkfontdir.
 %build
 %{__aclocal}
 %{__autoconf}
-%{__autoheader}
 %{__automake}
 %configure
 
