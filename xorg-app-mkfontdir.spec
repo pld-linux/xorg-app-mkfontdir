@@ -12,6 +12,7 @@ BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-util-util-macros >= 0.99.1
+Requires:	xorg-app-mkfontscale
 #BuildArch:	noarch but automake doesn't like it
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
