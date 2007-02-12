@@ -1,5 +1,5 @@
 Summary:	mkfontdir application
-Summary(pl.UTF-8):   Aplikacja mkfontdir
+Summary(pl.UTF-8):	Aplikacja mkfontdir
 Name:		xorg-app-mkfontdir
 Version:	1.0.2
 Release:	1
