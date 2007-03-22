@@ -1,12 +1,12 @@
 Summary:	mkfontdir application
 Summary(pl.UTF-8):	Aplikacja mkfontdir
 Name:		xorg-app-mkfontdir
-Version:	1.0.2
+Version:	1.0.3
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/mkfontdir-%{version}.tar.bz2
-# Source0-md5:	94da9dcd2447300e8fdada896d7ed433
+# Source0-md5:	4d0f89a23f77e22f1671a77bf0898955
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
