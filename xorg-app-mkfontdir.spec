@@ -1,12 +1,12 @@
 Summary:	mkfontdir application - create an index of X font files in a directory
 Summary(pl.UTF-8):	Aplikacja mkfontdir - tworzenie indeksu plików fontów X w katalogu
 Name:		xorg-app-mkfontdir
-Version:	1.0.4
+Version:	1.0.5
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/mkfontdir-%{version}.tar.bz2
-# Source0-md5:	35394bf3f746a57fba624dba52fdbba3
+# Source0-md5:	9365ac66d19186eaf030482d312fca06
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
