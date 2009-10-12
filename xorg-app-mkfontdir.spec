@@ -11,27 +11,20 @@ URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
-BuildRequires:	xorg-util-util-macros >= 0.99.2
+BuildRequires:	xorg-util-util-macros >= 1.3
 Requires:	xorg-app-mkfontscale
 #BuildArch:	noarch but automake doesn't like it
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-For each directory argument, mkfontdir reads all of the font files in
-the directory searching for properties named "FONT", or (failing that)
-the name of the file stripped of its suffix. These are converted to
-lower case and used as font names, and, along with the name of the
-font file, are written out to the file "fonts.dir" in the directory.
-The X server and font server use "fonts.dir" to find font files.
+mkfontdir creates the fonts.dir files needed by the legacy X server
+core font system. The current implementation is a simple wrapper
+script around the mkfontscale program, which must be installed first.
 
 %description -l pl.UTF-8
-mkfontdir dla każdego argumentu będącego katalogiem odczytuje
-wszystkie pliki fontów z tego katalogu wyszukując właściwości o nazwie
-"FONT" lub (jeśli to się nie uda) nazwy plików po usunięciu
-przyrostka. Te nazwy są przekształcane do małych liter i używane jako
-nazwy fontów, a następnie, wraz z nazwami plików fontów, zapisywane do
-pliku "fonts.dir" w katalogu. Serwer X oraz serwer fontów wykorzystują
-pliki "fonts.dir" do odnalezienia plików fontów.
+mkfontdir tworzy pliki fonts.dir wymagane przez stary system fontów
+serwera X. Aktualna implementacja to prosty skrypt obudowujący program
+mkfontscale, który musi być wcześniej zainstalowany.
 
 %prep
 %setup -q -n mkfontdir-%{version}
@@ -55,6 +48,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog
+%doc COPYING ChangeLog README
 %attr(755,root,root) %{_bindir}/mkfontdir
 %{_mandir}/man1/mkfontdir.1x*
