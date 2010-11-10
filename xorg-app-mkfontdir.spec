@@ -8,12 +8,12 @@ Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/mkfontdir-%{version}.tar.bz2
 # Source0-md5:	dc342dd8858416254bb5f71a9ddce589
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
-BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	xorg-util-util-macros >= 1.8
 Requires:	xorg-app-mkfontscale
-#BuildArch:	noarch but automake doesn't like it
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -33,7 +33,9 @@ mkfontscale, który musi być wcześniej zainstalowany.
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	--build=%{_host} \
+	--host=%{_host}
 
 %{__make}
 
